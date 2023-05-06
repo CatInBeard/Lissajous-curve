@@ -19,11 +19,58 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col">
-                
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="phase1">
+                                Initial phase &phi;<sub>1</sub>: 
+                            </label>
+                            <input id="phase1" type="range" class="form-range" onchange="redraw();" min="0" max="1" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label for="phase2">
+                                Initial phase &phi;<sub>2</sub>: 
+                            </label>
+                            <input id="phase2" type="range" class="form-range" onchange="redraw();" min="0" max="1" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label for="freq1">
+                                Frequency &omega;<sub>1</sub>
+                            </label>
+                            <input id="freq1" type="range" class="form-range" onchange="redraw();" min="0.01" step="0.01" max="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="freq2">
+                                Frequency &omega;<sub>2</sub>
+                            </label>
+                            <input id="freq2" type="range" class="form-range" onchange="redraw();" min="0.01" step="0.01" max="0.5" value="0.3">
+                        </div>
+                        <div class="form-group">
+                            <label for="amp1">
+                                Amplitude A<sub>1</sub>
+                            </label>
+                            <input id="amp1" type="range" class="form-range" onchange="redraw();" min="1" max="150" value="150">
+                        </div>
+                        <div class="form-group">
+                            <label for="amp1">
+                                Amplitude A<sub>2</sub>
+                            </label>
+                            <input id="amp2" type="range" class="form-range" onchange="redraw();" min="1" max="150" value="150">
+                        </div>
+                        <div class="mt-2">
+                            <div class="btn btn-primary" id="button_start" onclick="start_animation()">
+                                Start animation
+                            </div>
+                            <div class="btn btn-secondary visually-hidden" id="button_stop" onclick="stop_animation()">
+                                Stop animation
+                            </div>
+                        </div>
+                    </div>
+                </div>       
             </div>
             <div class="col">
                 <canvas id ="cnv" width="300" height="300">
-
+                    Your browser does not support canvas
                 </canvas>
             </div>
         </div>
